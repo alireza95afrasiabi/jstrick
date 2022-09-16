@@ -1,0 +1,2 @@
+# jstrick
+js trick
