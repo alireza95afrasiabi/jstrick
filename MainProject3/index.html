@@ -1,100 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    main{
-        width: 100%;
-        height: 100vh;
-        background-image: linear-gradient(45deg, purple, salmon, pink);
-        /* position: relative; */
-    }
-    main>div{
-        width: 5px;
-        height: 5px;
-        /* background-color: white; */
-        border: 2px solid white;
-        transform: translate(0px, 0px);
-        border-radius: 5px;
-        /* position: absolute;
-        top: 100px;
-        left: 100px; */
-    }
-    #h{
-        width: 80px;
-        height: 80px;
-        /* transform: translate(70%, 70%); */
-        border: 2px solid rgb(44, 0, 44);
-        /* border-radius: 50%; */
-        position: absolute;
-        /* bottom: 100px; */
-        /* right: 100px; */
-    }
-</style>
+<link rel="stylesheet" href="./style.css">
+
 <body>
     <main id="_main" onmousemove="_mm(event)">
-        <!-- <h1 id="h1">try to move to mouse in the circle</h1> -->
         <div id="_div"></div>
         <section id="h"></section>
     </main>
 </body>
-<script>
-
-alert('سعی کنید نوک پیکان موس با گوشه بالا جپ مربع مماس شود')
-
-let randb = parseInt((Math.random())*700)
-let randr = parseInt((Math.random())*1000)
-document.getElementById('h').style.bottom = randb+'px'
-document.getElementById('h').style.right = randr+'px'
-
-
-
-function _mm(e){
-
-    let x = e.clientX
-    let y = e.clientY
-
-
-    // let randb = parseInt((Math.random())*700)
-    // let randr = parseInt((Math.random())*1000)
-
-    // document.getElementById('h1').innerHTML = 'x is : ' + x + 'y is : ' + y 
-
-    document.getElementById('_div').style.transform = 'translate(' + x + 'px, '+ y +"px)"
-    document.getElementById('_div').style.width = x/15+'px'
-    document.getElementById('_div').style.height = y/15+'px'
-
-    let tem = document.getElementById('h').offsetTop
-    let tem1 = document.getElementById('h').offsetLeft
-
-    // document.getElementById('h').style.bottom = randb+'px'
-    // document.getElementById('h').style.right = randr+'px'
-
-    console.log(tem , tem1)
-
-    if (tem1 == x && tem == y ) {
-        alert("you did it")
-    }
-
-}
-
-
-// function _r(){
-//     let randb = parseInt((Math.random())*700)
-//     let randr = parseInt((Math.random())*1000)
-//     document.getElementById('h').style.bottom = randb+'px'
-//     document.getElementById('h').style.right = randr+'px'
-// }
-
-// _r()
+<script src="./script.js">
 </script>
+
 </html>
